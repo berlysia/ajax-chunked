@@ -1,0 +1,6 @@
+sample/vendor
+sample/.bundle
+sample/Gemfile.lock
+sample/eventemitter2.js
+node_modules
+*.log
