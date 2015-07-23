@@ -10,5 +10,23 @@
 </head>
 <body>
   <h1>hoge</h1>
+  <ul id="list">
+    <li>chunked data...</li>
+  </ul>
+  <script>
+    var stream = ChunkedAjax.get('./chunked');
+    var list = document.getElementById('list');
+    stream.on('data', function(data){
+      var li = document.createElement('li');
+      li.innerText = data;
+      list.appendChild(li);
+    });
+    stream.on('end', function(){
+      var li = document.createElement('li');
+      li.innerText = "done!";
+      list.appendChild(li);
+    })
+    stream.send();
+  </script>
 </body>
 </html>
