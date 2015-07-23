@@ -1,9 +1,6 @@
 if(typeof module !== 'undefined' && module.exports){
-  console.log('require');
   XMLHttpRequest = require('xhr2');
   EventEmitter = require('eventemitter2').EventEmitter2;
-}else{
-  console.log('window');
 }
 
 // util.inherits
